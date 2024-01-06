@@ -83,6 +83,7 @@ const Home = () => {
                   <Link key={pet._id + "details"} to={`/pets/${pet._id}`}>
                     Details
                   </Link>
+                  |
                   <Link key={pet._id + "edit"} to={`/pets/${pet._id}/edit`}>
                     Edit
                   </Link>

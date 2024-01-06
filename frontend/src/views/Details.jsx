@@ -55,7 +55,7 @@ const Details = () => {
 
   const handleLike = async () => {
     try {
-      await fetch(`/api/pets/${id}/like`, { method: "POST" });
+      await fetch(`/api/pets/${id}/like`, { method: "PUT" });
       setPet((prevPet) => ({
         ...prevPet,
         likes: prevPet.likes + 1,

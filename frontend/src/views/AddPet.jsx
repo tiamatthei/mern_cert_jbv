@@ -65,6 +65,7 @@ const AddPet = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  minLength={3}
                 />
               </label>
               <br />
@@ -76,6 +77,7 @@ const AddPet = () => {
                   value={formData.type}
                   onChange={handleChange}
                   required
+                  minLength={3}
                 />
               </label>
               <br />
@@ -86,6 +88,7 @@ const AddPet = () => {
                   value={formData.description}
                   onChange={handleChange}
                   required
+                  minLength={3}
                 />
               </label>
               <button type="submit">
