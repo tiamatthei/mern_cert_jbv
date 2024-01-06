@@ -10,7 +10,7 @@ const Home = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("/api/pets");
+      const response = await fetch("https://pet-shelter-9wau.onrender.com/api/pets");
       const data = await response.json();
       const sortedPets = data.sort((a, b) => a.type.localeCompare(b.type));
       setPets(sortedPets);

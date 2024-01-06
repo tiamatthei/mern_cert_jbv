@@ -14,7 +14,7 @@ const EditPet = ({ petId }) => {
     // Fetch pet details by ID
     const fetchPetDetails = async () => {
       try {
-        const response = await axios.get(`/api/pets/${petId}`);
+        const response = await axios.get(`https://pet-shelter-9wau.onrender.com/api/pets/${petId}`);
         setPet(response.data);
         setName(response.data.name);
         setType(response.data.type);
@@ -42,7 +42,7 @@ const EditPet = ({ petId }) => {
         likes,
       };
 
-      await axios.put(`/api/pets/${petId}`, updatedPet);
+      await axios.put(`https://pet-shelter-9wau.onrender.com/api/pets/${petId}`, updatedPet);
       // Handle success or redirection
     } catch (error) {
       console.error('Error updating pet:', error);

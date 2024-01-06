@@ -26,7 +26,7 @@ const AddPet = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/pets/", {
+      const response = await fetch("https://pet-shelter-9wau.onrender.com/api/pets/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

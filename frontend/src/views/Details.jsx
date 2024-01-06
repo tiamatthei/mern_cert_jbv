@@ -55,7 +55,7 @@ const Details = () => {
 
   const handleLike = async () => {
     try {
-      await fetch(`/api/pets/${id}/like`, { method: "PUT" });
+      await fetch(`https://pet-shelter-9wau.onrender.com/api/pets/${id}/like`, { method: "PUT" });
       setPet((prevPet) => ({
         ...prevPet,
         likes: prevPet.likes + 1,
@@ -68,7 +68,7 @@ const Details = () => {
 
   const handleAdopt = async () => {
     try {
-      var deleted = await fetch(`/api/pets/${id}/adopt`, { method: "DELETE" });
+      var deleted = await fetch(`https://pet-shelter-9wau.onrender.com/api/pets/${id}/adopt`, { method: "DELETE" });
       // Handle successful deletion, e.g., redirect to another page
       if (deleted.status === 200) {
         window.location.href = "/";
