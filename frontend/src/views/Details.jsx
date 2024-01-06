@@ -110,7 +110,7 @@ const Details = () => {
 
       {/* Render like button */}
       <div className="like-section">
-        <button onClick={handleLike} disabled={liked || pet.likes > 0}>
+        <button onClick={handleLike} disabled={liked}>
           {liked ? "Liked" : "Like"}
         </button>
         <p>

@@ -78,7 +78,11 @@ const petController = {
       if (!pet) {
         return res.status(404).json({ message: "Pet not found" });
       }
-      pet.findOneAndUpdate({ likes: pet.likes + 1 });
+      await Pet.findByIdAndUpdate(
+        req.params.id,
+        { $inc: { likes: 1 } },
+        { new: true } // To return the updated document
+      );
       await pet.save();
       res.json({ message: "Pet liked successfully" });
     } catch (err) {
