@@ -27,7 +27,7 @@ const Details = () => {
 
     const fetchPetDetails = async () => {
       try {
-        const response = await fetch(`/api/pets/${id}`);
+        const response = await fetch(`https://pet-shelter-9wau.onrender.com/api/pets/${id}`);
         const data = await response.json();
         setPet(data);
         setLoading(false);
