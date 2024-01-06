@@ -70,17 +70,23 @@ const EditPet = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Name"
+            required
+            minLength={3}
           />
           <input
             type="text"
             value={type}
             onChange={(e) => setType(e.target.value)}
             placeholder="Type"
+            required
+            minLength={3}
           />
           <textarea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Description"
+            required
+            minLength={3}
           />
           <button onClick={updatePet}>
             <FontAwesomeIcon icon={faEdit} />
