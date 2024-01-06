@@ -4,6 +4,7 @@ const petController = {
   getAllPets: async (req, res) => {
     try {
       const pets = await Pet.find();
+      console.log("pets", pets);
       res.json(pets);
     } catch (err) {
       res.status(500).json({ message: err.message });
